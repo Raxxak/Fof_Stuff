@@ -19,6 +19,9 @@ SubhaloVMax=np.array(Subhalo['SubhaloVmax']) #km/s
 #for naming the plot properly
 name=str(file)
 snap_num=name[28:31]
+#Get Redshift, boxsize, n_particle
+Redshift="{:.2e}".format(file['Header'].attrs['Redshift'])
+Boxsize=int((file['Header'].attrs['BoxSize']))
 
 
 #Take Absolute Values of the velocities
@@ -78,14 +81,14 @@ plt.grid(True, which="both", ls="-")
 
 
 
-plt.title("Max Velocity Distribution for snap"+snap_num)
+plt.title("Max Velocity Distribution for snap "+snap_num+' z= '+Redshift)
 plt.xlabel("Maximum Velocity (Km/s)")
 plt.ylabel("Halo Number")
 #plt.legend()
 plt.show()
-output_filename = 'MaxVelocityProfile'+snap_num + '.png'
+output_filename = 'MaxVelocityProfile_L'+str(Boxsize)+snap_num + '.png'
 
-#plt.savefig(output_filename)
+plt.savefig(output_filename)
 
 
 
