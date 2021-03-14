@@ -7,3 +7,10 @@ A sample fof file is added in case you wanted to test the scripts.
 - List_everything_fof.py will literally return all the values of the datasets and whatnot.
 - HaloMass_fof.py plots the cumulative halo mass function.
 - MaxVelProfile_fof.py plots the maximum velocity profile for the halos.
+
+
+
+Todo:
+- A script to plot velocity of particles in a halo.
+- A script to plot velocity of particles by SIDM type.
+
