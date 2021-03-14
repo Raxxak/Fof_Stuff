@@ -9,9 +9,12 @@ file = h5py.File('fof_subhalo_tab_005.hdf5', 'r')
 
 Subhalo=file.get('Subhalo')
 SubhaloMass=np.array(Subhalo['SubhaloMass'])
-SubhaloMass=10**10*SubhaloMass
+SubhaloMass=10**10*SubhaloMass #converting to solar masses
 
-#Radius=np.array(Subhalo['SubhaloHalfmassRad'])
+#Get Redshift, boxsize, n_particle
+Redshift="{:.2e}".format(file['Header'].attrs['Redshift'])
+Boxsize=int((file['Header'].attrs['BoxSize']))
+
 
 
 
@@ -61,13 +64,13 @@ plt.grid(True, which="both", ls="-")
 
 
 
-plt.title('Halo Mass Distribution L005N128')
+plt.title('Halo Mass Distribution L'+str(Boxsize)+', z= '+Redshift)
 plt.xlabel("HaloMass ($M_{\odot}$)")
 plt.ylabel("Halo Number")
 
 
-#print(output_filename)
-#plt.savefig(output_filename)
+output_filename=('Halo_Mass_Distribution_L'+str(Boxsize)+'_z_'+Redshift+'.png')
+plt.savefig(output_filename)
 plt.show()
 file.close()
 
