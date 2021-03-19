@@ -1,4 +1,4 @@
-# Fof_Stuff
+# Fof_Subhalo_Stuff
 All the scripts assume that the fof file is in the same directory. Otherwise you can add the path infront of the filename wich is at the top.
 
 A sample fof file is added in case you wanted to test the scripts.
