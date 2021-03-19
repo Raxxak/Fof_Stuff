@@ -64,12 +64,12 @@ plt.grid(True, which="both", ls="-")
 
 
 
-plt.title('Halo Mass Distribution L'+str(Boxsize)+', z= '+Redshift)
+plt.title('SubHalo Mass Distribution L'+str(Boxsize)+', z= '+Redshift)
 plt.xlabel("HaloMass ($M_{\odot}$)")
 plt.ylabel("Halo Number")
 
 
-output_filename=('Halo_Mass_Distribution_L'+str(Boxsize)+'_z_'+Redshift+'.png')
+output_filename=('SubHalo_Mass_Distribution_L'+str(Boxsize)+'_z_'+Redshift+'.png')
 plt.savefig(output_filename)
 plt.show()
 file.close()
